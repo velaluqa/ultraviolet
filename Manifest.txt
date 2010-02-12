@@ -1,4 +1,5 @@
 test/test_uv.rb
+lib/uv/version.rb
 lib/uv/render_processor.rb
 lib/uv/utility.rb
 lib/uv.rb
