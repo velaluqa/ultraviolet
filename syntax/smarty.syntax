@@ -57,7 +57,7 @@ patterns:
   captures: 
     "1": 
       name: punctuation.definition.variable.smarty
-  match: (\$)[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*?\b
+  match: (\$)[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*?\b
 - name: constant.language.smarty
   match: \b(TRUE|FALSE|true|false)\b
 foldingStopMarker: (</(?i:(head|table|tr|div|style|script|ul|ol|form|dl))>|\{\{?/(if|foreach|capture|literal|foreach|php|section|strip)|(^|\s)\})
