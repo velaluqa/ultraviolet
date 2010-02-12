@@ -87,7 +87,7 @@ patterns:
 - name: meta.normal-word.pmwiki
   match: `\w+
 - name: markup.underline.pmwiki
-  match: \b\u\w+\u\w+
+  match: \b\\u\w+\\u\w+
 - name: meta.link.inline.pmwiki
   begin: \[\[#
   contentName: string.other.link.title.pmwiki
