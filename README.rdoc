@@ -1,5 +1,9 @@
 = Ultraviolet
 
+* http://ultraviolet.rubyforge.org
+
+== DESCRIPTION:
+
 This is a fixed version of the Ultraviolet syntax highlighting library for the 1.9 tree of the Ruby programming language. There are still some languages that are not working, but hopefully will be soon. If you find any bugs, or fix any syntax files, please send me a note and I'll update the repository.
 
 == Non-working languages

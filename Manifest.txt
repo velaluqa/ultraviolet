@@ -156,7 +156,6 @@ syntax/mips.syntax
 syntax/twiki.syntax
 syntax/perl.syntax
 syntax/fxscript.syntax
-syntax/markdown.syntax
 syntax/lilypond.syntax
 syntax/blog_html.syntax
 syntax/html_mason.syntax
@@ -165,7 +164,6 @@ syntax/json.syntax
 syntax/languagedefinition.syntax
 syntax/tex_math.syntax
 syntax/xml_strict.syntax
-syntax/php.syntax
 syntax/doxygen.syntax
 syntax/strings_file.syntax
 syntax/makefile.syntax

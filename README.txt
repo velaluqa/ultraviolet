@@ -1,4 +1,4 @@
-== Ultraviolet
+= Ultraviolet
 
 Ultraviolet is a syntax highlighting library and engine. It
 uses TextMate[http://macromates.com/] syntax files and parses
