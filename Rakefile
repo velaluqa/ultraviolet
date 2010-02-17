@@ -6,7 +6,7 @@ begin
 
    Hoe.plugin :gemcutter
 
-   Hoe.spec 'ultraviolet' do
+   h = Hoe.spec 'ultraviolet' do
       developer("Chris Hoffman", "cehoffman@gmail.com")
       developer("Spox", "spox@modspox.com")
       developer("Dizan Vasquez", "dichodaemon@gmail.com")
@@ -18,7 +18,7 @@ begin
    end
    
    task :gemspec do
-     sh %{rake debug_gem | grep -v "(in " > `basename \\\`pwd\\\``.gemspec}
+     open(h.spec.name + ".gemspec", "w") { |f| f.write h.spec.to_ruby }
    end
 
 rescue LoadError => e
