@@ -1,30 +1,21 @@
-= Ultraviolet
+= Ultraviolet -- Ultraviolet1x
+
+Fixed version of the Ultraviolet syntax highlighting gem.
+ * works on Ruby18 and Ruby19
+ * more syntaxes then {spox}[https://github.com/spox/ultraviolet]
+ * lots of other bugfixes
 
 * http://ultraviolet.rubyforge.org
 
-== DESCRIPTION:
-
-This is a fixed version of the Ultraviolet syntax highlighting library for the 1.9 tree of the Ruby programming language. There are still some languages that are not working, but hopefully will be soon. If you find any bugs, or fix any syntax files, please send me a note and I'll update the repository.
-
-== Non-working languages
- * C
- * C++
- * mail
- * markdown
- * mel
- * PHP
- * pmwiki
- * Regexp Oniguruma
- * Regexp Python
- * Smarty
- 
 == Install
 
-Ultraviolet requires a couple other libraries. Textpow and plist are required but not working on 1.9. But don't fret, fixed versions can be found at the following locations:
+  gem install ultraviolet
 
-* {Textpow}[http://github.com/spox/textpow]
-* {plist}[http://github.com/spox/plist]
+== TODO
+ * repair markdown
+ * repair PHP
+ 
 
 = Etc.
 
-For ultraviolet information, see the README.txt file for original author information
+For original ultraviolet information, see README.txt
