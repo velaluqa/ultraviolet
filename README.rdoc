@@ -19,3 +19,11 @@ Fixed version of the Ultraviolet syntax highlighting gem.
 = Etc.
 
 For original ultraviolet information, see README.txt
+
+= Fork includes contributions of
+ * {Chris Hoffman}[https://github.com/cehoffman]
+ * {Spox}[https://github.com/spox]
+ * {Michael Grosser}[http://grosser.it]
+ * {Richard Ramsden}[https://github.com/rramsden]
+ * {Humza}[https://github.com/secondplanet]
+ * {Harry Brundage}[https://github.com/hornairs]
