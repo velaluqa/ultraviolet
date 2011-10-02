@@ -1110,6 +1110,4 @@ patterns:
 foldingStopMarker: (\*/|^\s*(\}|\]|\)))
 keyEquivalent: ^~P
 comment: |
-  
-  	TODO:	Include RegExp syntax
-
+# TODO:	Include RegExp syntax

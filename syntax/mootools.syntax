@@ -242,7 +242,7 @@ patterns:
     Cross browser methods to get various window dimensions.
     http://docs.mootools.net/files/Window/Window-Size-js.html
      -- note: getSize is already listed under Element
-- name: support.class.ajax.js.mootools
+- name: "support.class.ajax.js.mootools"
   match: \b(request|evalScripts)\b
   comment: |-
     
@@ -445,7 +445,7 @@ patterns:
   - endCaptures: 
       "1": 
         name: punctuation.definition.parameters.end.js
-    begin: ,\s*(\{)
+    begin: ',\s*(\{)'
     contentName: variable.parameter.fx.style.options.js.mootools
     beginCaptures: 
       "1": 

@@ -84,8 +84,8 @@ patterns:
   end: -\]
   patterns: 
   - include: text.pmwiki
-- name: meta.normal-word.pmwiki
-  match: `\w+
+- name: 'meta.normal-word.pmwiki'
+  match: '`\w+'
 - name: markup.underline.pmwiki
   match: \b\\u\w+\\u\w+
 - name: meta.link.inline.pmwiki
