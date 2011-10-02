@@ -5,4 +5,5 @@ gem 'textpow1x'
 
 group :dev do
   gem 'rake', '0.8.7'
+  gem 'rspec'
 end
