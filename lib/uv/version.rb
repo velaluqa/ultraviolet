@@ -1,3 +1,3 @@
 module Uv
-  Version = "0.12.2"
+  Version = "0.13.0"
 end
