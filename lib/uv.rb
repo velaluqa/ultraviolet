@@ -10,7 +10,7 @@ module Uv
     attr_accessor :render_path, :theme_path, :syntax_path, :default_style, :syntaxes
   end
 
-  self.syntax_path   = File.join(File.dirname(__FILE__), '..', 'syntax')
+  self.syntax_path   = Textpow.syntax_path
   self.render_path   = File.join(File.dirname(__FILE__), '..', 'render')
   self.theme_path    = File.join(render_path, 'xhtml', 'files', 'css')
   self.default_style = 'mac_classic'

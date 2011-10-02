@@ -2,7 +2,7 @@
 
 Fixed version of the Ultraviolet syntax highlighting gem.
  * works on Ruby18 and Ruby19
- * more syntaxes then {spox}[https://github.com/spox/ultraviolet]
+ * more syntaxes then {spox}[https://github.com/spox/ultraviolet] through [textpow1x](https://github.com/grosser/textpow)
  * lots of other bugfixes
 
 * http://ultraviolet.rubyforge.org
@@ -10,11 +10,6 @@ Fixed version of the Ultraviolet syntax highlighting gem.
 == Install
 
   gem install ultraviolet
-
-== TODO
- * repair markdown
- * repair PHP
- 
 
 = Etc.
 
