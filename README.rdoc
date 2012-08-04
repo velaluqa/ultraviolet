@@ -5,11 +5,9 @@ Fixed version of the Ultraviolet syntax highlighting gem.
  * more syntaxes then {spox}[https://github.com/spox/ultraviolet] through [textpow1x](https://github.com/grosser/textpow)
  * lots of other bugfixes
 
-* http://ultraviolet.rubyforge.org
-
 == Install
 
-  gem install ultraviolet
+  gem install ultraviolet1x
 
 = Etc.
 
