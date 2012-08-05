@@ -1,119 +1,4 @@
-~Ultraviolet~
-~~Syntax Highlighting Engine~~
-
-#Introduction# | index
-
-=About=
-
-Ultraviolet is a syntax highlighting engine based on 
-[Textpow http://textpow.rubyforge.org]. Since it uses [Textmate http://macromates.com] 
-syntax files, it offers out of the box syntax highlighting for more than 50 
-[languages http://macromates.com/svn/Bundles/trunk/Bundles/] and 20 
-[themes > themes].
-
-Ultraviolet is at the same time a stand-alone command line utility and a Ruby
-library.
-
-= Requirements = 
-
-* [Textpow http://textpow.rubyforge.org].
-
-= Installation =
-
-If you have [rubygems http://docs.rubygems.org/] installation is straightforward by typing 
-(as root if needed):
-
---------hl shell-unix-generic,,false------
-gem install -r ultraviolet --include-dependencies
-------------------------------------------
-
-If you prefer to get the sources, the last stable version may be
-downloaded [here http://rubyforge.org/frs/?group_id=3513].
-
-= Status =
-
-The current version of Ultraviolet is able to produce html output for all
-the syntaxes in textmate's [repository http://macromates.com/svn/Bundles/trunk/Bundles/]. 
-Further work will be done to produce latex output.
-
-= To Do =
-
-||  Priority  |  Description                                                              |
-| high        | Complete *rdoc* api documentation                                         |
-| alpha       | Produce latex output                                                      |
-| high        | Implement lazy loading for syntaxes (significant speed increase expected) |
-| medium      | Support for user defined syntaxes and themes in user's HOME directory     |
-
-# Usage #
-
-= Command Line =
-
-Some examples of command line usage.
-
-*   Getting help:
-    --------hl shell-unix-generic,,false--------
-    uv --help
-    --------------------------------------------
-
-*   Listing available syntaxes:
-    --------hl shell-unix-generic,,false--------
-    uv -l syntax
-    --------------------------------------------
-
-*   Listing available themes:
-    --------hl shell-unix-generic,,false--------
-    uv -l themes
-    --------------------------------------------
-
-*   Letting uv to guess the parameters:
-    --------hl shell-unix-generic,,false--------
-    uv lib/uv.rb
-    --------------------------------------------
-
-*   Specifying a syntax and a theme
-    --------hl shell-unix-generic,,false--------
-    uv -s yaml -t espresso_libre syntax/ini.syntax
-    --------------------------------------------
-    
-*   Output results to `index.html` and copy required files (/eg/ css):
-    --------hl shell-unix-generic,,false--------
-    uv -c . syntax/ini.syntax > index.html
-    --------------------------------------------
-    
-*   Producing output in latex and converting to pdf:
-    --------hl shell-unix-generic,,false--------
-    uv -h -o latex lib/uv.rb > uv.tex
-    pdflatex uv.tex
-    --------------------------------------------
-    
-= Using ultraviolet as a library =
-
-The interface is very similar to the one of the command line.
-
-*   List of available syntaxes:
-    --------hl ruby,,false--------
-    puts Uv.syntaxes.join( ", " )
-    --------------------------------------------
-
-*   Listing available themes:
-    --------hl ruby,,false--------
-    puts Uv.themes.join( ", " )
-    --------------------------------------------
-
-*   Parsing a css string. Produce xhtml output, with line numbers 
-    using *amy* theme:
-    --------hl ruby,,false--------
-    result = Uv.parse( text, "xhtml", "css", true, "amy")
-    ------------------------------
-
-*   Output copy required files for `xhtml` format to directory `site`:
-    --------hl ruby,,false--------
-    Uv.copy_files "xhtml", "site"
-    ------------------------------
-
-#Examples#
-
-##Syntax Gallery##
+## Syntax Gallery
 
 These are just some examples of the languages that ultraviolet handles. The
 complete list is [here http://macromates.com/svn/Bundles/trunk/Bundles/].
@@ -150,27 +35,27 @@ void Init_oregexp() {
 
 namespace Learning {
    template <
-      typename Real, 
-      template <typename> class Son, 
+      typename Real,
+      template <typename> class Son,
       typename traits = Traits<Real, Son> >
    class Unit {
    public:
       typedef typename traits::vector_type vector_type;
       typedef typename traits::unit_type unit_type;
-      
+
       template <typename InputIterator>
-      Unit( 
+      Unit(
          InputIterator begin,
          InputIterator end
       ) :
          value( begin, end )
-      {} 
-            
+      {}
+
       virtual void addNeighbor( const unit_type & unit ) {
          neighbors.insert( &unit );
          neighborList.push_back( &unit );
       }
-      
+
       virtual void deleteNeighbor( const unit_type & unit ) {
          neighbors.erase( &unit );
          typename std::deque< const unit_type* >::iterator i;
@@ -181,23 +66,23 @@ namespace Learning {
             }
          }
       }
-      
+
       bool hasNeighbor( const unit_type & unit ) {
          return neighbors.find( &unit) != neighbors.end();
       }
-      
+
       int getNeighborCount() {
          return neighbors.size();
       }
-      
+
       unit_type & getNeighbor( int pos ) {
          return *( const_cast< unit_type* >(neighborList[pos]) );
       }
-      
+
       vector_type & getValue() {
          return value;
       }
-      
+
       virtual ~Unit() {
       }
    private:
@@ -242,13 +127,13 @@ namespace Learning {
 \subsection{Measuring prediction accuracy}
 %------------------------------------------------------------------------------
 
-A common performance metric for probabilistic approaches is the maximum data 
-likelihood or approximations like the \ac{bic} (see \S 
-\ref{sec:hmm:structure_learning}). However, for our particular application, 
-this metric has the drawback of not having any geometric interpretation. 
-Intuitively, we would like to know \emph{how far} was the predicted state from 
-the real one. Hence, we have preferred to measure the performance of our 
-algorithm in terms of the average error, computed as the expected distance between 
+A common performance metric for probabilistic approaches is the maximum data
+likelihood or approximations like the \ac{bic} (see \S
+\ref{sec:hmm:structure_learning}). However, for our particular application,
+this metric has the drawback of not having any geometric interpretation.
+Intuitively, we would like to know \emph{how far} was the predicted state from
+the real one. Hence, we have preferred to measure the performance of our
+algorithm in terms of the average error, computed as the expected distance between
 the prediction for a time horizon $H$ and the effective observation $O_{t+H}$.
 
 \begin{equation}
@@ -258,10 +143,10 @@ the prediction for a time horizon $H$ and the effective observation $O_{t+H}$.
 \end{equation}
 
 \noindent for a single time step. This measure may be generalized for a complete
-data set containing $K$ observation sequences: 
+data set containing $K$ observation sequences:
 
 \begin{equation}
-  \langle E \rangle = 
+  \langle E \rangle =
     \frac{1}{K}
     \sum_{k = 1}^{K}
       \frac{1}{T^k-H}
@@ -271,10 +156,10 @@ data set containing $K$ observation sequences:
 \label{eq:results:expected_distance_general}
 \end{equation}
 
-It is worth noting that, as opposed to the standard approach in machine 
-learning of conducting tests using a ``learning'' and a ``testing'' data  sets, 
-the experiments we have presented here will use only a single data set. The 
-reason is that, since learning takes place after prediction, there is no need 
+It is worth noting that, as opposed to the standard approach in machine
+learning of conducting tests using a ``learning'' and a ``testing'' data  sets,
+the experiments we have presented here will use only a single data set. The
+reason is that, since learning takes place after prediction, there is no need
 to such separation: every observation sequence is ``unknown'' when prediction
 takes place.
 ----------------------------
@@ -300,7 +185,7 @@ takes place.
 
 ---------hl html-----------
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html 
+<!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 
@@ -786,55 +671,3 @@ module Uv
    end
 end
 ---------------------------------
-
-# Maintainer info #
-
-= Updating syntax files =
-
-Ultraviolet stores syntax files under the `syntax` directory. Syntax files can 
-be directly converted from Textmate format using the `plist2syntax` script that 
-gets installed with Textpow.
-
---------hl shell-unix-generic,,false------
-plist2syntax $BUNDLE_DIR/Java.tmbundle/Syntaxes/Java.plist
-mv java.yaml syntax/java.syntax
-------------------------------------------
-
-= Updating theme files =
-
-Currently only XHTML is "officially" supported by ultraviolet, nevertheless, 
-experimental latex output support already exists and other output formats can
-be included in the future. This is important because theme conversion is format
-dependent. For xhmtl, the command is `theme2xhtmlrender` as shown in the 
-following example.
-
---------hl shell-unix-generic,,false------
-theme2xhtmlrender $THEME_DIR/Amy.tmTheme
-------------------------------------------
-
-For latex, the command `theme2latexrender` is used instead.
-
---------hl shell-unix-generic,,false------
-theme2latexrender $THEME_DIR/Amy.tmTheme
-------------------------------------------
-
-
-# Links #
-
-= Rubyforge Project page =
-
-* [Ultraviolet http://rubyforge.org/projects/ultraviolet/]
-
-= Requirements =
-
-* [Textpow http://rubyforge.org/projects/textpow/].
-
-= Projects using Ultraviolet =
-
-* [Macaronic markup engine http://mama.rubyforge.org/].
-* [Radiograph rails plugin http://agilewebdevelopment.com/plugins/radiograph].
-* [SimpleHighlight plugin for SimpleLog http://www.daikini.com/past/2007/6/14/simplehighlight_syntax_highlighting_for_simplelog/]
-
-= Other =
-
-* [Uv tutorial in french http://blog.irrealia.org/articles/2007/06/13/apr-egrave-s-coderay-ultraviolet-utilisation-dans-rails-en-ligne-de-commande-ou-comme-une-librairie]
