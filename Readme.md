@@ -46,6 +46,7 @@ Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
 
 # TODO
  - less crazy Uv.parse interface -> options hash
+ - replace them gallery example with some nice example code
 
 # Maintainer info
 
