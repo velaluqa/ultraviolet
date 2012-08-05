@@ -7,7 +7,7 @@ It uses [Textpow](https://github.com/grosser/textpow) to supports more than 60 p
 
 Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
 
-# [Demo](grosser.github.com/ultraviolet)
+# [Demo](http://grosser.github.com/ultraviolet)
 
 # Usage
 
@@ -43,6 +43,9 @@ Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
  - [Macaronic markup engine](http://mama.rubyforge.org)
  - [Radiograph rails plugin](http://agilewebdevelopment.com/plugins/radiograph)
  - [SimpleHighlight plugin for SimpleLog](http://www.daikini.com/past/2007/6/14/simplehighlight_syntax_highlighting_for_simplelog)
+
+# TODO
+ - less crazy Uv.parse interface -> options hash
 
 # Maintainer info
 
