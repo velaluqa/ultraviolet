@@ -5,6 +5,8 @@ It uses [Textpow](https://github.com/grosser/textpow) to supports more than 60 p
 
     gem install ultraviolet
 
+Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
+
 # [Demo](grosser.github.com/ultraviolet)
 
 # Usage
