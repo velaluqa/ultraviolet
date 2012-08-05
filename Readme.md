@@ -1,9 +1,9 @@
-Ultraviolet is a syntax highlighting library.<br/>
+Ultraviolet is a html syntax highlighting library.<br/>
 It uses [Textpow](https://github.com/grosser/textpow) and supports more than 60 programming languages.
 
 # INSTALL
 
-    gem install
+    gem install ultraviolet
 
 Authors
 =======
