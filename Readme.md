@@ -50,6 +50,14 @@ Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
 
 # Maintainer info
 
+### Updating demo
+
+    cd _pages
+    bundle exec ruby generate.rb
+    bundle exec rackup
+
+    open http://localhost:9292
+
 ### Updating theme files
 
 Currently only XHTML is "officially" supported by ultraviolet, nevertheless,
