@@ -87,3 +87,4 @@ Original author [Dizan Vasquez](https://github.com/dichodaemon).
 [Michael Grosser](http://grosser.it)<br/>
 michael@grosser.it<br/>
 License: MIT<br/>
+[![Build Status](https://secure.travis-ci.org/grosser/ultraviolet.png)](http://travis-ci.org/grosser/ultraviolet)
