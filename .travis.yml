@@ -1,5 +1,5 @@
 before_install:
-  - sudo apt-get install -y libonig-dev && bundle && git submodule init && git submodule update
+  - sudo apt-get install -y libonig-dev
 rvm:
   - ree
   - 1.9.2
