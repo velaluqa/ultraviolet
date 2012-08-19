@@ -87,4 +87,3 @@ Original author [Dizan Vasquez](https://github.com/dichodaemon).
 [Michael Grosser](http://grosser.it)<br/>
 michael@grosser.it<br/>
 License: MIT<br/>
-[![Flattr](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=grosser&url=https://github.com/grosser/ultraviolet&title=ultraviolet&language=en_GB&tags=github&category=software)

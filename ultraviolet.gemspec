@@ -11,5 +11,5 @@ Gem::Specification.new "ultraviolet", Uv::Version do |s|
 
   s.files = `git ls-files`.split("\n")
   s.executables = ["theme2xhtmlrender", "theme2latexrender", "uv"]
-  s.add_runtime_dependency "textpow1x", '>=0.11.0'
+  s.add_runtime_dependency "textpow", ">=1.3.0"
 end
