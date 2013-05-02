@@ -1,7 +1,6 @@
-require File.expand_path('spec/spec_helper')
+require "spec_helper"
 
 describe Uv do
-  # all 2 legacy tests ...
   it "parses blank" do
     Uv.parse('', 'xhtml', 'css').should == %(<pre class="mac_classic"></pre>)
   end
