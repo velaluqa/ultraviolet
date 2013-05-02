@@ -7,25 +7,24 @@ require "uv/version"
 
 module Uv
   class << self
-    attr_accessor :render_path, :theme_path, :syntax_path, :default_style, :syntaxes
+    attr_accessor :render_path, :theme_path, :syntax_path, :default_style
   end
 
   self.syntax_path   = Textpow.syntax_path
   self.render_path   = File.join(File.dirname(__FILE__), '..', 'render')
   self.theme_path    = File.join(render_path, 'xhtml', 'files', 'css')
   self.default_style = 'mac_classic'
-  self.syntaxes      = {}
-  
+
   def self.path
     result = []
     result << File.join(File.dirname(__FILE__), ".." )
   end
 
   def self.syntax_node_for(syntax)
-    if @syntaxes.key?(syntax)
-      @syntaxes[syntax]
+    if syntax_nodes.key?(syntax)
+      syntax_nodes[syntax]
     else
-      @syntaxes[syntax] = Textpow.syntax(syntax) || raise(ArgumentError, "No syntax found for #{syntax}")
+      syntax_nodes[syntax] = Textpow.syntax(syntax) || raise(ArgumentError, "No syntax found for #{syntax}")
     end
   end
 
@@ -37,10 +36,15 @@ module Uv
   end
 
   def self.syntaxes
-    Dir.glob( File.join(@syntax_path, '*.syntax') ).collect do |f| 
+    Dir.glob( File.join(@syntax_path, '*.syntax') ).collect do |f|
       File.basename(f, '.syntax')
     end
   end
+
+  def self.syntax_nodes
+    @syntax_nodes ||= Hash[syntaxes.map { |name| [name, Textpow.syntax(name)] }]
+  end
+  private_class_method :syntax_nodes
 
   def self.themes
     Dir.glob( File.join(@theme_path, '*.css') ).collect do |f| 
@@ -49,18 +53,15 @@ module Uv
   end
 
   def self.syntax_for_file(file_name)
-    init_syntaxes unless @syntaxes
-
     # get first non-empty line
     first_line = ""
     File.open( file_name, 'r' ) { |f|
       while (first_line = f.readline).strip.size == 0; end
     }
 
-
     # find syntax by file-extension
     result = []
-    @syntaxes.each do |key, syntax|
+    syntax_nodes.each do |key, syntax|
       assigned = false
       if syntax.fileTypes
         syntax.fileTypes.each do |t|
