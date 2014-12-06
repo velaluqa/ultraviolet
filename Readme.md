@@ -47,6 +47,7 @@ Ruby 1.8: [Install onigumura](https://github.com/grosser/textpow#ruby-18)
 # TODO
  - less crazy Uv.parse interface -> options hash
  - replace them gallery example with some nice example code
+ - try using atom cson (https://github.com/atom/language-ruby/blob/master/grammars/ruby.cson)
 
 # Maintainer info
 
