@@ -31,7 +31,7 @@ module Uv
   def self.copy_files(output, output_dir)
     Uv.path.each do |dir|
       dir_name = File.join( dir, "render", output, "files" )
-      FileUtils.cp_r( Dir.glob(File.join( dir_name, "." )), output_dir ) if File.exists?( dir_name )
+      FileUtils.cp_r( Dir.glob(File.join( dir_name, "." )), output_dir ) if File.exist?( dir_name )
     end
   end
 

@@ -100,7 +100,7 @@ elsif o.list
 end
 
 if o.copy_files
-   unless File.exists?(o.copy_files)
+   unless File.exist?(o.copy_files)
       STDERR.puts "The specified output directory: #{o.copy_files} does not exist."
       exit -1
    end
